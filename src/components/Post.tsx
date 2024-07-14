@@ -40,12 +40,12 @@ export default function Post({ author: { name, avatarUrl, role }, content, publi
 
   }
 
-  const handleNewCommentChange = (e: React.FormEvent<HTMLTextAreaElement>) => {
+  const handleNewCommentChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     e?.target?.setCustomValidity('')
     setNewCommentText(e?.currentTarget.value)
   }
 
-  const handleNewCommentInvalid = (e: React.FormEvent<HTMLTextAreaElement>) => {
+  const handleNewCommentInvalid = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     e?.target?.setCustomValidity('Esse campo é obrigatório!');
   }
 
